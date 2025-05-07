@@ -2,6 +2,7 @@ export default {
   async fetch(request, env, ctx) {
     const html = `
 
+    
     <!DOCTYPE html>
     <html lang="en">
     <head>
