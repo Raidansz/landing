@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>SquareCast Beta</title>
+      <!-- Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+      <style>
+        :root {
+          --gradient-start: #ff6ec4;
+          --gradient-end: #7873f5;
+          --accent: #ffeb3b;
+          --bg-dark: #1a1a2e;
+          --text-light: #f5f5f5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+          font-family: 'Poppins', sans-serif;
+          background: var(--bg-dark);
+          color: var(--text-light);
+          line-height: 1.6;
+        }
+        header {
+          background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+          padding: 100px 20px 80px;
+          text-align: center;
+          clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+          position: relative;
+        }
+        .app-icon {
+          width: 120px;
+          height: 120px;
+          border-radius: 30px;
+          background: #fff;
+          padding: 10px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+          margin-bottom: 20px;
+        }
+        header h1 {
+          font-size: 3em;
+          font-weight: 700;
+          margin-bottom: 0.3em;
+          text-shadow: 2px 2px rgba(0,0,0,0.2);
+        }
+        header p {
+          font-size: 1.2em;
+          margin-bottom: 1em;
+          opacity: 0.9;
+        }
+        .btn {
+          display: inline-block;
+          background: var(--accent);
+          color: var(--bg-dark);
+          font-weight: 500;
+          text-decoration: none;
+          padding: 15px 30px;
+          border-radius: 50px;
+          transition: transform 0.3s ease, background 0.3s ease;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+          transform: translateY(-3px) scale(1.05);
+          background: #ffe54c;
+        }
+        section.features {
+          padding: 60px 20px;
+          max-width: 900px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        section.features h2 {
+          font-size: 2em;
+          margin-bottom: 0.5em;
+          color: var(--accent);
+        }
+        section.features ul {
+          list-style: none;
+          margin-top: 1em;
+        }
+        section.features li {
+          font-size: 1.1em;
+          margin: 15px 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        section.features li::before {
+          content: "🎧";
+          margin-right: 10px;
+          font-size: 1.5em;
+        }
+        .screenshot {
+          margin-top: 40px;
+          max-width: 350px;
+          width: 100%;
+          border-radius: 20px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+          transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+          transform: scale(1.02);
+        }
+        section.info {
+          padding: 40px 20px;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        details {
+          background: #222;
+          border-radius: 8px;
+          padding: 15px;
+          margin: 10px 0;
+        }
+        summary {
+          font-weight: 600;
+          cursor: pointer;
+          position: relative;
+          padding-right: 25px;
+          color: var(--accent);
+        }
+        summary::after {
+          content: '▼';
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        details[open] summary::after {
+          content: '▲';
+        }
+        details .content {
+          margin-top: 10px;
+          text-align: left;
+          line-height: 1.5;
+          color: var(--text-light);
+          white-space: pre-wrap;
+        }
+        footer {
+          background: #111;
+          padding: 40px 20px;
+          text-align: center;
+        }
+        footer p.copy {
+          margin-top: 30px;
+          font-size: 0.8em;
+          color: #777;
+        }
+      </style>
+    </head>
+    <body>
+      <header>
+        <img class="app-icon" src="icon.png" alt="SquareCast Logo">
+        <h1>SquareCast Beta</h1>
+        <p>Experience podcasts like never before—now in beta on TestFlight!</p>
+        <a class="btn" href="https://testflight.apple.com/join/YOUR_BETA_CODE" target="_blank" rel="noopener noreferrer">Join the Beta on TestFlight</a>
+      </header>
+    
+      <section class="features">
+        <h2>Key Features</h2>
+        <ul>
+          <li>Curated podcast recommendations</li>
+          <li>Personalized playlists & wake-up alarms</li>
+          <li>Offline listening anywhere</li>
+          <li>Dark & light themes</li>
+          <li>Speed control & chapter navigation</li>
+        </ul>
+        <img class="screenshot" src="screenshot.png" alt="SquareCast App screenshot">
+      </section>
+    
+      <section class="info">
+        <details>
+          <summary>About Us</summary>
+          <div class="content">SquareCast is developed and maintained by Raidan Shugaa Addin, a Budapest-based developer dedicated to uniting people across languages through audio storytelling. Launched on April 1, 2025, SquareCast redefines podcasting by offering streaming, offline downloads, transcription, translation, and dubbing—making global content accessible in your language. From Hungary to the world, our mission is to bridge cultures and spark connections, one podcast at a time. Follow our journey on Instagram (@squarecast.app) or email us at support@squarecast.app. Thank you for listening with us!</div>
+        </details>
+        <details>
+          <summary>Contact Us</summary>
+          <div class="content">For questions, technical support, or feedback about SquareCast, please email us at support@squarecast.app. Include your device model (e.g., iPhone 14), iOS version, and a detailed description of your inquiry. We strive to respond within 48 hours, though complex issues may take longer during high-volume periods. For urgent matters, mark your email “URGENT.” Follow us on Instagram (@squarecast.app) for updates and community support.
+    
+    SquareCast
+    Attn: Raidan Shugaa Addin
+    Budapest, Hungary
+    support@squarecast.app</div>
+        </details>
+        <details>
+          <summary>Feedback & Support</summary>
+          <div class="content">Your input helps SquareCast grow! Share feature requests, report bugs, or suggest improvements by emailing support@squarecast.app. For support, provide your device details (e.g., iPhone 13, iOS 18), app version (Settings > App Version Info), and steps to replicate your issue—this speeds up our help. We aim to reply within 48 hours. You can also rate us on the App Store or message us on Instagram (@squarecast.app). For common questions, check our FAQ (coming soon at squarecast.app/faq). We’re committed to resolving issues fairly but can’t guarantee fixes for every scenario (e.g., third-party podcast outages).</div>
+        </details>
+        <details>
+          <summary>Agreement</summary>
+          <div class="content">By downloading, accessing, or using SquareCast, you agree to be bound by our Terms of Service and Privacy Policy (detailed below). These legal documents govern your use of the app, outline your rights and responsibilities, and explain how we manage your data. They apply whether you use SquareCast as a guest or with an account. If you don’t agree, please stop using the app. For clarification or concerns, contact us at support@squarecast.app.</div>
+        </details>
+        <details>
+          <summary>Terms of Service</summary>
+          <div class="content">Terms of Service
+    Last Updated: April 1, 2025
+    
+    Welcome to SquareCast, a podcast app developed by Raidan Shugaa Addin (“we,” “us,” or “our”) in Budapest, Hungary. These Terms of Service (“Terms”) are a legal agreement between you (“you” or “user”) and us, governing your use of SquareCast, including all features, updates, and content (collectively, the “Service”). By using the Service, you accept these Terms in full.
+    
+    1. Eligibility
+    You must be at least 13 years old to use SquareCast, per the U.S. Children’s Online Privacy Protection Act (COPPA) and similar laws. If you’re under 18, you confirm you have parental consent. We may restrict access in certain regions due to legal or technical limitations.
+    
+    2. License to Use
+    We grant you a limited, non-exclusive, non-transferable, revocable license to use SquareCast for personal, non-commercial purposes. This includes streaming podcasts, downloading for offline use, and accessing transcription, translation, and dubbing features, subject to these Terms.
+    
+    3. Accounts
+    Account creation is optional. If you register via Firebase Authentication, you provide your name, email, and password. You’re responsible for:
+    - Keeping your credentials confidential.
+    - All activity under your account, authorized or not.
+    Notify us immediately at support@squarecast.app if you suspect unauthorized access. We may suspend accounts for security or policy breaches.
+    
+    4. Acceptable Use
+    You agree not to:
+    - Copy, distribute, or sell SquareCast or its content (e.g., podcasts, translations) without permission.
+    - Reverse-engineer, decompile, or hack the app.
+    - Use the Service for illegal activities (e.g., piracy, fraud).
+    - Harass or impersonate others via account features.
+    - Overload our servers (e.g., excessive downloads) or interfere with other users’ access.
+    - Scrape or harvest data from the app.
+    Violation may result in account suspension, termination, or legal action.
+    
+    5. Content
+    - Third-Party Podcasts: SquareCast streams content from external providers. We don’t control or endorse this content and aren’t liable for its accuracy, legality, or availability.
+    - Translations/Dubbing: Our AI-generated translations and dubs aim for accuracy but may contain errors. They’re for convenience, not official use.
+    - Ownership: We own SquareCast’s code, design, and branding. Podcast content belongs to its creators or licensors.
+    
+    6. Future Payments (Placeholder)
+    Currently, SquareCast is free. If we introduce subscriptions, in-app purchases, or premium features (e.g., ad-free listening), pricing and terms will be disclosed via the App Store. Payments will follow Apple’s policies, including cancellations and refunds. We’ll update these Terms accordingly.
+    
+    7. Termination
+    - By You: Delete your account in Settings or stop using SquareCast.
+    - By Us: We may suspend or terminate your access for violating these Terms, legal requirements, or operational needs (e.g., app discontinuation), with or without notice. Upon termination, your license ends, but Sections 5, 8, 9, and 11 survive.
+    
+    8. Disclaimer of Warranties
+    SquareCast is provided “as is” and “as available.” We don’t guarantee:
+    - Uninterrupted or error-free service (e.g., due to server outages or podcast feed issues).
+    - Accuracy of translations, transcriptions, or dubbing.
+    - Compatibility with all devices or iOS versions.
+    External factors (e.g., internet failure) are beyond our control.
+    
+    9. Limitation of Liability
+    To the fullest extent permitted by law (including Hungarian and EU law), we, our affiliates, and partners aren’t liable for:
+    - Indirect, incidental, or consequential damages (e.g., lost data, profits).
+    - Issues from third-party content or services (e.g., podcast outages, Firebase downtime).
+    - Damages exceeding €50 or the amount you paid us (if any).
+    This applies even if we’re notified of potential issues.
+    
+    10. Intellectual Property
+    Report copyright concerns to support@squarecast.app. We’ll address valid claims under applicable laws (e.g., EU Directive 2001/29/EC). Don’t misuse our trademarks (e.g., “SquareCast”) or content.
+    
+    11. Governing Law
+    These Terms are governed by Hungarian law. Disputes will be resolved in Budapest courts, unless EU consumer laws grant you local jurisdiction.
+    
+    12. Changes
+    We may modify these Terms. Significant changes will be notified via the app or email. Continued use after updates means you accept them.
+    
+    13. Contact
+    Raidan Shugaa Addin, support@squarecast.app, Budapest, Hungary.</div>
+        </details>
+        <details>
+          <summary>Privacy Policy</summary>
+          <div class="content">Privacy Policy
+    Last Updated: April 1, 2025
+    
+    SquareCast, developed by Raidan Shugaa Addin in Budapest, Hungary, respects your privacy. This Privacy Policy details how we collect, use, disclose, and protect your information under Hungarian and EU laws (e.g., GDPR).
+    
+    1. Information We Collect
+    - Account Data: If you create an optional account via Firebase Authentication, we collect your name, email, and password.
+    - Usage Data: We track podcasts you stream, download, or translate; features used (e.g., dubbing); and session duration to enhance functionality.
+    - Device Data: Device type (e.g., iPhone 14), iOS version, IP address, and crash logs for troubleshooting.
+    - Cache Data: Temporary files from streaming or downloads, removable via Settings > Clear Cache.
+    We don’t collect payment info yet, as SquareCast is free.
+    
+    2. How We Use Your Information
+    - Deliver and personalize SquareCast (e.g., podcast recommendations, language preferences).
+    - Process translations, transcriptions, and dubbing via AI tools.
+    - Analyze usage (e.g., via Firebase Analytics) to fix bugs and plan features.
+    - Respond to support requests or legal obligations.
+    
+    3. Legal Basis (GDPR)
+    - Consent: Account creation and optional features rely on your agreement.
+    - Legitimate Interest: Usage and device data improve the app and ensure stability.
+    - Contract: Data supports your use of SquareCast’s features.
+    You can withdraw consent anytime in Settings.
+    
+    4. Disclosure of Information
+    - Firebase (Google): Handles authentication and analytics. See their policies at [firebase.google.com/policies].
+    - Legal Requirements: We may share data if required by law (e.g., court orders) or to protect our rights.
+    - No Selling: We don’t sell, rent, or trade your data to advertisers or others.
+    If SquareCast is sold or merged, data may transfer to new owners under this policy.
+    
+    5. Data Retention
+    - Account data is kept until you delete your account.
+    - Usage data is retained for 12 months, then anonymized.
+    - Cache data is deleted when you clear it or uninstall the app.
+    After account deletion, we may keep minimal data for legal purposes (e.g., 6 months per Hungarian law).
+    
+    6. Your Rights (GDPR)
+    As an EU resident (or user), you can:
+    - Access, correct, or delete your data.
+    - Restrict or object to processing.
+    - Request data portability.
+    Email support@squarecast.app with your request—we’ll respond within 30 days. Complaints? Contact Hungary’s National Authority for Data Protection ([naih.hu]).
+    
+    7. Security
+    We rely on Firebase’s encryption and secure servers. We also use HTTPS for data transfers. However, no system is immune to breaches—we’ll notify you and authorities per GDPR if a significant incident occurs.
+    
+    8. International Transfers
+    Firebase may process data outside the EU (e.g., U.S.). They comply with EU-U.S. Data Privacy Framework or Standard Contractual Clauses.
+    
+    9. Children’s Privacy
+    SquareCast isn’t aimed at kids under 13. If we detect such users, we’ll delete their data promptly.
+    
+    10. Future Features
+    If we add subscriptions or ads, we’ll update this policy to cover payment or tracking data.
+    
+    11. Updates
+    Changes will be posted here or notified in-app. Review periodically.
+    
+    12. Contact
+    Raidan Shugaa Addin, support@squarecast.app, Budapest, Hungary.</div>
+        </details>
+        <details>
+          <summary>App Version Info</summary>
+          <div class="content">SquareCast Version 1.0
+    Released: April 1, 2025
+    Developer: Raidan Shugaa Addin
+    Check for updates in the App Store.</div>
+        </details>
+      </section>
+    
+      <footer>
+        <p class="copy">&copy; 2025 SquareCast. All rights reserved.</p>
+      </footer>
+    </body>
+    </html>
